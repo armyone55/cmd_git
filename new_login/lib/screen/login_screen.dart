@@ -39,7 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
       },
       textInputAction: TextInputAction.done,
       decoration: InputDecoration(
-          prefixIcon: Icon(Icons.phone_android_sharp),
+          prefixIcon: Icon(Icons.vpn_key),
           contentPadding: EdgeInsets.fromLTRB(20, 15, 12, 0),
           hintText: "password",
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))),
@@ -65,11 +65,11 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
     return Scaffold(
-      backgroundColor: Color.fromARGB(121, 150, 155, 137),
+      backgroundColor: Color.fromARGB(121, 9, 192, 64),
       body: Center(
         child: SingleChildScrollView(
           child: Container(
-            color: Color.fromARGB(57, 129, 165, 140),
+            color: Color.fromARGB(57, 8, 236, 76),
             child: Padding(
               padding: const EdgeInsets.all(36.0),
               child: Form(
@@ -88,9 +88,21 @@ class _LoginScreenState extends State<LoginScreen> {
                     emailfield,
                     SizedBox(height: 25),
                     passwordField,
-                    SizedBox(height: 50),
+                    SizedBox(height: 25),
                     loginButton,
                     SizedBox(height: 40),
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text("Don't have an account?"),
+                          GestureDetector(
+                              onTap: () {},
+                              child: Text("Sign Up",
+                                  style: TextStyle(
+                                      color: Colors.redAccent,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15))),
+                        ])
                   ],
                 ),
               ),
