@@ -114,6 +114,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       backgroundColor: Color.fromARGB(121, 9, 192, 64),
       appBar: AppBar(
         backgroundColor: Colors.black87,
+        elevation: 50,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.blue),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
       ),
       body: Center(
         child: SingleChildScrollView(
